@@ -33,7 +33,7 @@ const FloatingObject = ({ Icon, delay }) => (
       rotate: [0, 360],
     }}
     transition={{
-      duration: 6,
+      duration: 1,
       repeat: Infinity,
       repeatType: "reverse",
       delay: delay,
@@ -62,10 +62,6 @@ function App() {
 
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-purple-700 to-indigo-900 text-white overflow-hidden">
-      {/* Floating background objects */}
-      {[...Array(20)].map((_, i) => (
-        <FloatingObject key={i} Icon={i % 2 === 0 ? Star : (i % 3 === 0 ? Cloud : (i % 5 === 0 ? Sun : Moon))} delay={i * 0.2} />
-      ))}
 
       {/* Hero Section */}
       <header className="relative h-screen flex items-center justify-center overflow-hidden">
