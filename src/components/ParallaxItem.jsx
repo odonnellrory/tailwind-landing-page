@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { motion, useViewportScroll, useTransform } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 const ParallaxItem = ({ children, speed = 10 }) => {
     const [elementTop, setElementTop] = useState(0);
     const [clientHeight, setClientHeight] = useState(0);
-    const { scrollY } = useViewportScroll();
+    const { scrollY } = useScroll();
 
     useEffect(() => {
         const element = document.getElementById("parallax-wrapper");
